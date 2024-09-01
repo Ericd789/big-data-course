@@ -1,0 +1,2 @@
+hdfs dfs -rm -r /user/$USER/mrjobexample
+python3 city_combiner.py -r hadoop --hadoop-streaming-jar /home2/hadoop-3.3.6/share/hadoop/tools/lib/hadoop-streaming-3.3.6.jar --jobconf mapreduce.job.reduces=4 hdfs:///datasets/cities --output-dir hdfs:///user/$USER/mrjobexample --no-output
